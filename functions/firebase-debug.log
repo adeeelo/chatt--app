@@ -1,0 +1,68 @@
+[debug] [2022-11-20T19:20:16.099Z] ----------------------------------------------------------------------
+[debug] [2022-11-20T19:20:16.103Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2022-11-20T19:20:16.104Z] CLI Version:   11.16.0
+[debug] [2022-11-20T19:20:16.105Z] Platform:      win32
+[debug] [2022-11-20T19:20:16.105Z] Node Version:  v16.17.1
+[debug] [2022-11-20T19:20:16.115Z] Time:          Mon Nov 21 2022 00:20:16 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-11-20T19:20:16.115Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-20T19:20:16.353Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-20T19:20:16.354Z] > authorizing via signed-in user (onlylegend4@gmail.com)
+[debug] [2022-11-20T19:20:16.354Z] [iam] checking project chatt-applicationn for permissions ["firebase.projects.get"]
+[debug] [2022-11-20T19:20:16.359Z] > refreshing access token with scopes: []
+[debug] [2022-11-20T19:20:16.364Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-20T19:20:16.364Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-20T19:20:16.861Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-20T19:20:16.861Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-20T19:20:16.921Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatt-applicationn:testIamPermissions [none]
+[debug] [2022-11-20T19:20:16.921Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatt-applicationn:testIamPermissions x-goog-quota-user=projects/chatt-applicationn
+[debug] [2022-11-20T19:20:16.922Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatt-applicationn:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-20T19:20:18.507Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatt-applicationn:testIamPermissions 200
+[debug] [2022-11-20T19:20:18.507Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatt-applicationn:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-11-20T19:20:18.518Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-20T19:20:19.024Z] [functions] Using node@16 from host.
+[debug] [2022-11-20T19:20:19.027Z] defaultcredentials: writing to file C:\Users\HP\AppData\Roaming\firebase\onlylegend4_gmail_com_application_default_credentials.json
+[debug] [2022-11-20T19:20:19.030Z] DEBUG: Setting GAC to C:\Users\HP\AppData\Roaming\firebase\onlylegend4_gmail_com_application_default_credentials.json
+[debug] [2022-11-20T19:20:19.031Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatt-applicationn/adminSdkConfig [none]
+[debug] [2022-11-20T19:20:19.615Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatt-applicationn/adminSdkConfig 200
+[debug] [2022-11-20T19:20:19.616Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatt-applicationn/adminSdkConfig {"projectId":"chatt-applicationn","storageBucket":"chatt-applicationn.appspot.com"}
+[debug] [2022-11-20T19:20:19.686Z] [functions] Watching "C:\Users\HP\Desktop\chatt app\chatt-app\functions" for Cloud Functions...
+[debug] [2022-11-20T19:20:19.715Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-20T19:20:32.147Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-20T19:20:32.148Z] Building nodejs source
+[debug] [2022-11-20T19:20:32.148Z] Analyzing nodejs backend spec
+[debug] [2022-11-20T19:20:32.152Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-20T19:20:35.531Z] Serving at port 9005
+
+[debug] [2022-11-20T19:20:36.153Z] Got response from /__/functions.yaml {"endpoints":{"detectEvilUsers":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/chatt-applicationn/databases/(default)/documents/messages/{msgId}"},"retry":false},"labels":{},"entryPoint":"detectEvilUsers"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-20T19:20:36.218Z] shutdown requested via /__/quitquitquit
+
+[debug] [2022-11-20T19:20:36.269Z] [functions] Loaded functions definitions from source: detectEvilUsers.
+[debug] [2022-11-20T19:20:36.271Z] [functions[us-central1-detectEvilUsers]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: detectEvilUsers 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
